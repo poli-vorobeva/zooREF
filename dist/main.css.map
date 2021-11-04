@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":"AAAA;EACE,uBAAuB;AACzB","sources":["webpack://my-webpack-project/./src/header/Header.css"],"sourcesContent":["*{\r\n  background: navajowhite;\r\n}\r\n"],"names":[],"sourceRoot":""}
