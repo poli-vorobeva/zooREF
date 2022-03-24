@@ -1,0 +1,21 @@
+.our-mission__content{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 80%;
+  max-width: 1619px;
+  margin: 0 auto;
+  height: 400px;
+}
+.our-mission__item{
+  margin: 30px;
+  width: 25%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.our-mission__item img {
+  width: 100px;
+  height: 100px;
+}

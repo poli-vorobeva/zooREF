@@ -1,0 +1,71 @@
+.map-wrapper{
+    position: relative;
+    width: 1400px;
+    height: 600px;
+    margin: 0 auto;
+}
+.map__content .btnPrimary{
+    margin: 0 auto;
+}
+.map__pin-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.pin-card__title p{
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px rgb(0 0 0 / 20%);
+    margin: 2%;
+}
+.pin-card__wrapper{
+    background: #ead1d1;
+    border-radius: 60%;
+    padding: 10%;
+    display: none;
+}
+
+.pin-card__region p b {
+display: block;
+}
+.pin-icon__svg{
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 0;
+}
+.pin-icon__image{
+    width: 60px;
+    padding-top: 20px;
+    display: block;
+    margin: 0 auto;
+}
+.pin__wrapper__item{
+    display: flex;
+    position: absolute;
+}
+.item__aligator{
+    top: 13%;
+    left: 16%;
+}
+.item__monkey{
+    left: 42%;
+    top: 32%;
+}
+.item__panda{
+    left: 72%;
+    top: 18%;
+}
+.item__eagle{
+    left: 6%;
+    top: 10%;
+}
+.pin__icon{
+    width: 100px;
+    height: 140px;
+    position: relative;
+}

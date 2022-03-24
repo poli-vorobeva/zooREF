@@ -1,0 +1,88 @@
+.range__wrapper input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 245px;
+  height: 4px;
+}
+.range__wrapper input[type=range]:focus {
+  outline: none;
+}
+.range__wrapper input[type=range]::-webkit-slider-runnable-track {
+  width: 245px;
+  height: 4px;
+  cursor: pointer;
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+  background: rgba(189, 189, 189, 0.57);
+  border-radius: 1.3px;
+  /*border: 0.2px solid #010101;*/
+}
+.range__wrapper input[type=range]::-webkit-slider-thumb {
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+  /*border: 1px solid #000000;*/
+  width: 30px;
+  height: 10px;
+  /* border-radius: 3px;*/
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -2px;
+}
+.range__wrapper input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgba(189, 189, 189, 0.57);
+}
+.range__wrapper input[type=range]::-moz-range-track {
+  width: 245px;
+  height: 4px;
+  cursor: pointer;
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+  background: rgba(189, 189, 189, 0.57);
+  border-radius: 1.3px;
+  /*border: 0.2px solid #010101;*/
+}
+.range__wrapper input[type=range]::-moz-range-thumb {
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+  /*border: 1px solid #000000;*/
+  height: 36px;
+  width: 16px;
+  /*border-radius: 3px;*/
+  background: #ffffff;
+  cursor: pointer;
+}
+.range__wrapper input[type=range]::-ms-track {
+  width: 245px;
+  height: 4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+.range__wrapper input[type=range]::-ms-fill-lower {
+  background: rgba(189, 189, 189, 0.57);
+  /*border: 0.2px solid #010101;*/
+  border-radius: 2.6px;
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+}
+.range__wrapper input[type=range]::-ms-fill-upper {
+  background: rgba(189, 189, 189, 0.57);
+  /*border: 0.2px solid #010101;*/
+  border-radius: 2.6px;
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+}
+.range__wrapper input[type=range]::-ms-thumb {
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+  /*border: 1px solid #000000;*/
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.range__wrapper input[type=range]:focus::-ms-fill-lower {
+  background: rgba(189, 189, 189, 0.57);
+}
+.range__wrapper input[type=range]:focus::-ms-fill-upper {
+  background: rgba(189, 189, 189, 0.57);
+}
+
+/*# sourceMappingURL=range.css.map */

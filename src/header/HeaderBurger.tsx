@@ -7,7 +7,7 @@ export const HeaderBurger = (props: { [key: string]: linksObj }) => {
         <div className="">
             <div className="header__burger-menu">
                 <input id="header__burger-menu__toggle" type="checkbox"/>
-                <label className="header__burger-menu__btn" htmlFor="header__burger-menu__toggle">
+                <label className="header__burger-menu__btn menu__btn" htmlFor="header__burger-menu__toggle">
                     <span></span>
                 </label>
                 <ul className="header__burger-menu-nav">
