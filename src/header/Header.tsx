@@ -17,7 +17,7 @@ export const Header=()=>{
         console.log(color)
     }
     return(
-        <header>
+        <header data-testid='header'>
             <div className="header-wrapper">
                 <h1>Online Zoo</h1>
                 <div className="header-logo" >

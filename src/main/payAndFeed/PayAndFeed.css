@@ -1,40 +1,40 @@
 .pay-and-feed {
-    background: #616161;
     height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #616161;
 }
 
 .pay-and-feed__wrapper {
+    height: 70%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    height: 70%;
 }
-.pay-and-feed .btnPrimary{
-  margin: 0 auto;
+
+.pay-and-feed .btnPrimary {
+    margin: 0 auto;
 }
 
 .pay-and-feed__circles {
-    display: flex;
     width: 100%;
+    max-width: 1400px;
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
-  max-width: 1400px;
 }
 
 .item-circle {
-    border: 4px solid white;
     width: 200px;
     height: 200px;
-    border-radius: 50%;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    border: 4px solid white;
+    border-radius: 50%;
 }
 
 .item-circle img {

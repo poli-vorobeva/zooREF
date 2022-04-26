@@ -1,17 +1,18 @@
 import * as React from "react";
-
+import './Footer.css'
 export const Footer=()=>{
     return(
         <footer>
             <div className="footer__content">
-                <div className="footer-form">
+                <div className="footer__form">
                     <div className="header__logo footer__logo">
                         <a href="#logo">
                             <img src="./assets/light-white.svg" alt="logo"/>
                         </a>
                     </div>
+                    <form id="form__contact">
                     <h6 className="footer-form__title">Contact us</h6>
-                    <form id="form-contact">
+                  
                         <input
                             type="text"
                             placeholder="Name"

@@ -4,14 +4,11 @@ import {Main} from "./main/Main";
 import {Footer} from "./footer/Footer";
 
 export const App = () => {
-
-
     return (
-        <div className="container">
+        <div className="container" data-testid={'app'}>
             <Header/>
             <Main/>
             <Footer/>
         </div>
     )
-
 }

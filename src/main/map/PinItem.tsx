@@ -24,6 +24,7 @@ const PinSvg = () => {
 }
 const PinItem = (props: {
   item: {
+    id:number,
     name: string,
     imgUrl: string,
     region: string,
@@ -31,7 +32,7 @@ const PinItem = (props: {
   }
 }) => {
   return (
-    <div className={`pin__wrapper__item item__${props.item.name}`}>
+    <div key={props.item.id} className={`pin__wrapper__item item__${props.item.name}`}>
       <div className={`pin__icon pin__icon-${props.item.name}`}>
         <img src={props.item.imgUrl}   className='pin-icon__image' alt={props.item.name} />
         <PinSvg />

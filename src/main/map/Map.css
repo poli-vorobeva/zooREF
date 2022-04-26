@@ -1,70 +1,82 @@
-.map-wrapper{
+.map-wrapper {
+    width: 100vw;
+    height: 40vw;
+    margin: 0 auto;
     position: relative;
-    width: 1400px;
-    height: 600px;
+}
+
+.map__content .btnPrimary {
     margin: 0 auto;
 }
-.map__content .btnPrimary{
-    margin: 0 auto;
-}
-.map__pin-wrapper{
+
+.map__pin-wrapper {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
 }
-.pin-card__title p{
+
+.pin-card__title p {
+    margin: 2%;
     text-transform: uppercase;
     text-align: center;
     text-decoration: underline;
     letter-spacing: 2px;
     text-shadow: 2px 2px rgb(0 0 0 / 20%);
-    margin: 2%;
 }
-.pin-card__wrapper{
-    background: #ead1d1;
-    border-radius: 60%;
+
+.pin-card__wrapper {
     padding: 10%;
     display: none;
+    background: #ead1d1;
+    border-radius: 60%;
 }
 
 .pin-card__region p b {
-display: block;
+    display: block;
 }
-.pin-icon__svg{
-    position: absolute;
+
+.pin-icon__svg {
     width: 100px;
+    position: absolute;
     top: 0;
     left: 0;
 }
-.pin-icon__image{
+
+.pin-icon__image {
     width: 60px;
     padding-top: 20px;
-    display: block;
     margin: 0 auto;
+    display: block;
 }
-.pin__wrapper__item{
-    display: flex;
+
+.pin__wrapper__item {
     position: absolute;
+    display: flex;
 }
-.item__aligator{
+
+.item__aligator {
     top: 13%;
     left: 16%;
 }
-.item__monkey{
+
+.item__monkey {
     left: 42%;
     top: 32%;
 }
-.item__panda{
+
+.item__panda {
     left: 72%;
     top: 18%;
 }
-.item__eagle{
+
+.item__eagle {
     left: 6%;
     top: 10%;
 }
-.pin__icon{
+
+.pin__icon {
     width: 100px;
     height: 140px;
     position: relative;

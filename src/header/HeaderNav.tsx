@@ -1,13 +1,22 @@
 import * as React from "react";
-export type linksObj={[key:string]:string}
 
-export const HeaderNav=(props:{[key:string]:linksObj})=>{
+export type linksObj = { [key: string]: string }
 
-    return(
+export const HeaderNav = (props: { [key: string]: linksObj }) => {
+
+    return (
         <nav className="header-nav nav">
             <ul>
                 {
-                    Object.entries(props.links).map(el=><li className="nav-item"><a href={el[1]}>{el[0]}</a></li>)
+                    Object.entries(props.links).map((el, ind) => {
+                        return <li
+                            className="nav-item"
+                            key={ind}>
+                            <a href={el[1]}>
+                                {el[0]}
+                            </a>
+                        </li>
+                    })
                 }
             </ul>
         </nav>

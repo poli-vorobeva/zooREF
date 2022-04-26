@@ -10,7 +10,7 @@ import {Map} from "./map/Map";
 
 export const Main = () => {
     return (
-        <main className="landing__main">
+        <main className="landing__main" data-testid={'main'}>
             <StartPage/>
             <HowWork/>
             <PetsInZoo/>

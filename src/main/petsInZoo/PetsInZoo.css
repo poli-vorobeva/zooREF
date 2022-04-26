@@ -1,78 +1,91 @@
-.pets-in-zoo{
-  height: 900px;
-  position: relative;
+.pets-in-zoo {
+    height: 900px;
+    position: relative;
 }
-.pets-in-zoo-slider__block{
-  display: flex;
+
+.pets-in-zoo-slider__block {
+    display: flex;
 }
-.pets-in-zoo__wrapper{
-  overflow: hidden;
-  width: 80%;
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
+
+.pets-in-zoo__wrapper {
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
-.pets-in-zoo__slider-hide__wrapper{
- overflow: hidden;
-  position: relative;
-  left: 100px;
+
+.pets-in-zoo__slider-hide__wrapper {
+    position: relative;
+    left: 100px;
+    overflow: hidden;
 }
-.pets-in-zoo__wrapper .btnPrimary{
-  margin: 0 auto;
+
+.pets-in-zoo__wrapper .btnPrimary {
+    margin: 0 auto;
 }
-.pets-in-zoo__slider-wrapper{
-  display: flex;
-  position: relative;
+
+.pets-in-zoo__slider-wrapper {
+    display: flex;
+    position: relative;
 }
-.pets-in-zoo__range{
-  text-align: center;
+
+.pets-in-zoo__range {
+    text-align: center;
 }
-.petsInZoo-itemContent{
-  position: relative;
+
+.petsInZoo-itemContent {
+    position: relative;
 }
-.petsInZoo-itemContent figcaption{
-  position: absolute;
-  color: white;
-  width: 80%;
-  height: 20%;
-  text-align: justify;
-  left: 10%;
-  bottom:-100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  transition: all ease 1000ms;
+
+.petsInZoo-itemContent figcaption {
+    width: 80%;
+    height: 20%;
+    position: absolute;
+    left: 10%;
+    bottom: -100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    color: white;
+    text-align: justify;
+    transition: all ease 1000ms;
 }
-.petsInZoo-itemContent:hover figcaption{
-  bottom:10%
+
+.petsInZoo-itemContent:hover figcaption {
+    bottom: 10%
 }
-.pets-in-zoo__slider-hide{
-  display: flex;
-  position: relative;
-  transition: all ease 500ms;
+
+.pets-in-zoo__slider-hide {
+    display: flex;
+    position: relative;
+    transition: all ease 500ms;
 }
-.pets-in-zoo-slider__left{
-  position: absolute;
-  top: 30%;
-  height: 50px;
-  background: transparent;
-  border: none;
-  outline: none;
-  width: 50px;
+
+.pets-in-zoo-slider__left {
+    width: 50px;
+    position: absolute;
+    top: 30%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
 }
-.pets-in-zoo-slider__right{
-  position: absolute;
-  top: 30%;
-  height: 50px;
-  background: transparent;
-  border: none;
-  outline: none;
-  width: 50px;
-  right: 0;
-  transform: rotate(180deg);
+
+.pets-in-zoo-slider__right {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    transform: rotate(180deg);
 }
-.petsInZoo-sliderButtons{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+
+.petsInZoo-sliderButtons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }

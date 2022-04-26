@@ -1,0 +1,94 @@
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    color: white;
+    height: 700px;
+}
+
+.footer__form,
+.footer__menu {
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 50%;
+}
+
+#form__contact {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.footer-form__title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#form__contact input {
+    margin-bottom: 2px;
+    line-height: 35px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white
+}
+
+.footer-form__fieldset {
+    line-height: 45px;
+}
+
+.footer-form__checkbox {
+    margin: 10px 0;
+    display: flex;
+}
+
+.footer-form__agree {
+    padding-left: 10px;
+    font-size: 0.7rem;
+}
+
+.footer__nav-adaptive-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 20px 0 0;
+}
+
+.footer__nav-adaptive-list li {
+    list-style: none;
+}
+
+.footer__nav-adaptive-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer__nav {
+    height: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.footer-contacts__item {
+    padding: 20px 0;
+}
+
+.footer-contacts__item p a {
+    color: white;
+}
+
+.footer-contacts__item ul {
+    padding: 0;
+    display: flex;
+    justify-content: start;
+}
+
+.footer-contacts__item ul li {
+    padding-right: 10px;
+    list-style: none;
+}
