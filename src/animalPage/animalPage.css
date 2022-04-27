@@ -1,0 +1,26 @@
+.animalPage_wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100vw;
+    background-color: green;
+    height: 90vh;
+}
+
+.animalPage_aside {
+    width: 20vw;
+}
+
+.animalPage_content {
+    width: 80vw;
+}
+
+.animalPage_sliderWrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.animalPage_sliderWrapper div {
+}
