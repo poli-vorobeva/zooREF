@@ -1,7 +1,8 @@
-.animalPage-video{
+.animalPage-video {
     width: 80%;
 }
-.animalPage_videoActive{
+
+.animalPage_videoActive {
     width: 560px;
     height: 315px;
     background-repeat: no-repeat;
@@ -9,7 +10,8 @@
     background-size: cover;
     position: relative;
 }
-.animalPage_videoActiveButton{
+
+.animalPage_videoActiveButton {
     position: absolute;
     top: 40%;
     left: 40%;
@@ -21,14 +23,54 @@
     border-radius: 25px;
     transition: all ease 500ms;
 }
-.animalPage_videoActive:hover .animalPage_videoActiveButton{
+
+.animalPage_videoActive:hover .animalPage_videoActiveButton {
     background-color: #ff132cd9;
     box-shadow: inset 0 0 33px 10px #e1021c;
 }
-.animalPageVideo_slider{
-    display: flex;
+
+.animalPageVideo_sliderWrapper {
+    overflow: hidden;
+    position: relative;
 }
-.animalPageVideo_sliderItem{
-    width: 100px;
-    height: 75px;
+
+.animalPageVideo_sliderWrapper > div {
+    margin-top: 20px;
+}
+
+.animalPageVideo_slider {
+    display: flex;
+    position: relative;
+    transition: all ease 500ms;
+
+}
+
+.animalPageVideo_sliderItem {
+
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.animalPageVideo_sliderLeft,.animalPageVideo_sliderRight{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.animalPageVideo_sliderLeft,.animalPageVideo_sliderRight{
+    mix-blend-mode: plus-lighter;
+}
+.animalPageVideo_sliderLeft {left: 0}
+
+.animalPageVideo_sliderRight {right: 0;}
+.animalPageVideo_sliderRight img{
+    transform: rotate(180deg);
+    position: relative;
+    right: 15px;
+
 }

@@ -4,7 +4,6 @@ import {videoAnimalsData} from "../../../animalsData";
 import './animalPageVideo.css'
 export const AnimalPageVideo=(props:{activeAnimal:string})=>{
 const videoData = videoAnimalsData.find(el=>el.animal===props.activeAnimal)
-    console.log('VideoData',videoData)
     return(
         <div className="animalPage-video">
             <div className="animalPage_videoActive"
