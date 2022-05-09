@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import './animalPageAside.css'
 import {animalDataType} from "../animalPage";
 type asideAnimal={
@@ -10,15 +10,61 @@ export const AnimalPageAside = (props:{animals:asideAnimal[],currentActiveAnimal
     const elementWidth = 80
     const elementHeight = 80
     const elementPadding=20
+    const [currentPosition,setCurrentPosition]=useState(0)
+    const different=(elementHeight+elementPadding)*props.animals.length-(elementHeight+elementPadding)*3
+    console.log(different)
+const [displayArrows,setDisplayArrows]=useState(false)
 
+    const scroll = (direction: string) => {
+        const item = elementWidth+elementPadding
+        console.log(direction)
+        if (direction === 'up') {
+            if (Math.abs(currentPosition + item) < different && (currentPosition + item) <= 0) {
+                setCurrentPosition(currentPosition + item)
+            }
+        } else {
+            if (Math.abs(currentPosition - item*2) <= different) {
+                setCurrentPosition(currentPosition - item)
+            }
+        }
+
+    }
     return (
-        <aside className="animalPage_aside">
-            <div className='animalPage_sliderWrapper' style={{height:(elementHeight+elementPadding*2)*3}}>
-                {props.animals.map((el, ind) => {
-                    return <div key={ind} style={{width:elementWidth+'px',height:elementHeight+'px',margin:elementPadding+'px'}}>
-                        <img alt={el.animal} src={el.imgSrc} style={{width:elementWidth+'px'}}/>
-                    </div>
-                })}
+        <aside className="animalPage_aside"
+               onMouseEnter={()=>setDisplayArrows(true)}
+               onMouseLeave={()=>setDisplayArrows(false)}
+        >
+            <div className="animalPage_slideUp"
+            onClick={()=>scroll('up')}>
+                {
+                    displayArrows && <img
+                        src="./public/assets/svg/arrowSlider.svg"
+                        alt=""
+                    />
+                }
+            </div>
+            <div className="animalPage_asideContainer"
+                 style={{height:(elementHeight+elementPadding)*3+10}}>
+                <div className='animalPage_asideSliderWrapper'
+                     style={{
+                         transform:`translateY(${currentPosition}px)`,
+                         height:(elementHeight+elementPadding*2)*props.animals.length}}>
+
+                    {props.animals.map((el, ind) => {
+                        return <div key={ind} style={{width:elementWidth+'px',height:elementHeight+'px',margin:elementPadding+'px'}}>
+                            <img alt={el.animal} src={el.imgSrc} style={{width:elementWidth+'px'}}/>
+                        </div>
+                    })}
+                </div>
+            </div>
+            <div className="animalPage_slideDown"
+            onClick={()=>scroll('down')}>
+                {
+                    displayArrows && <img
+                        src="./public/assets/svg/arrowSlider.svg"
+                        alt=""
+                    />
+                }
             </div>
             {/*<div className="video-page__slider">*/}
             {/*    <div className="slider__arrow video-slider__left-arrow">*/}

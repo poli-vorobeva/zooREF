@@ -8,12 +8,18 @@
 
 .animalPage_aside {
     width: 20vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .animalPage_content {
     width: 80vw;
 }
+.asideSliderWrapper{
 
+}
 .animalPage_sliderWrapper {
     display: flex;
     flex-flow: column nowrap;

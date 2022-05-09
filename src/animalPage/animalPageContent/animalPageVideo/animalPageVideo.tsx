@@ -8,7 +8,7 @@ const videoData = videoAnimalsData.find(el=>el.animal===props.activeAnimal)
         <div className="animalPage-video">
             <div className="animalPage_videoActive"
                  style={{
-                     backgroundImage:`url(${videoData.activeVideo.videoScreen})`}}>
+                     backgroundImage:`url(${videoData.videos[0].videoScreen})`}}>
                 <button className="animalPage_videoActiveButton"></button>
                 {/*<img src={videoData.activeVideo.videoScreen} alt=""/>*/}
                 {/*<iframe width="560" height="315" src={videoData.activeVideo.videoLink}*/}

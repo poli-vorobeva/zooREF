@@ -1,0 +1,13 @@
+.animalPage_asideContainer{
+overflow: hidden;
+}
+.asideSliderWrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.animalPage_asideSliderWrapper{
+    transition: all ease 500ms;
+
+}
