@@ -1,12 +1,21 @@
 import React, {useState} from "react";
 import {videoDataType} from "../../../../animalsData";
+import {videoFrame} from "../animalPageVideo";
 
 export const AnimalPageVideoSlider = (props: { videoData: videoDataType }) => {
     const itemWidth = 180
+    const itemHeight=100
     const itemMargin = 10
     const [displayArrows, setDisplayArrows] = useState(false)
     const [currentPosition, setCurrentPosition] = useState(0)
     const differentWidht = ((itemWidth + itemMargin) * props.videoData.videos.length) - (itemWidth + itemMargin) * 3
+    const [loadVideo,setLoadVideo]=useState(null)
+    const [clickedVideo,setClickedVideo]=useState(null)
+    const loadedVideos=new Set()
+    const iframeLoadHandler=()=>{
+        setLoadVideo(clickedVideo)
+        loadedVideos.add(clickedVideo)
+    }
     const scroll = (direction: string) => {
         const item = itemWidth + itemMargin
         if (direction === 'left') {
@@ -36,10 +45,22 @@ export const AnimalPageVideoSlider = (props: { videoData: videoDataType }) => {
                     return (
                         <div className="animalPageVideo_sliderItem"
                              style={{
-                                 backgroundImage: `url(${vid.videoScreen})`,
+                                 backgroundImage: (loadVideo!==ind)
+                                     ?`url(${vid.videoScreen})`
+                                     :(loadVideo && clickedVideo===ind)&&'',
                                  width: `${itemWidth}px`,
+                                 height:`${itemHeight}px`,
                                  marginRight: `${itemMargin}px`
-                             }}></div>
+                             }}>
+                            {clickedVideo===ind && videoFrame({width:itemWidth,height:itemHeight,
+                                url:vid.videoLink,iframeLoadHandler})}
+
+                            {clickedVideo!==ind && <button
+                                className="animalPage_videoSliderItemButton"
+                                onClick={() => {
+                                    setClickedVideo(ind)
+                                }}></button>}
+                        </div>
                     )
 
                 })}

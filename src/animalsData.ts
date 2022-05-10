@@ -37,27 +37,27 @@ export const videoAnimalsData = [
         animal: 'panda',
         videos: [
             {
-                videoLink: "https://www.youtube.com/watch?v=OObOQ2GElhA",
+                videoLink: "https://www.youtube.com/embed/OObOQ2GElhA",
                 videoScreen: 'https://i.ytimg.com/vi/OObOQ2GElhA/default.jpg'
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=ogpqmb1j5Jw',
+                videoLink: 'https://www.youtube.com/embed/ogpqmb1j5Jw',
                 videoScreen: 'https://i.ytimg.com/vi/ogpqmb1j5Jw/default.jpg'
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=pOyQluexkRw',
+                videoLink: 'https://www.youtube.com/embed/pOyQluexkRw',
                 videoScreen: 'https://i.ytimg.com/vi/pOyQluexkRw/default.jpg'
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=I-ovzUNno7g',
+                videoLink: 'https://www.youtube.com/embed/I-ovzUNno7g',
                 videoScreen: 'https://i.ytimg.com/vi/I-ovzUNno7g/default.jpg'
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=kPiZyt4zdGc',
+                videoLink: 'https://www.youtube.com/embed/kPiZyt4zdGc',
                 videoScreen: 'https://i.ytimg.com/vi/kPiZyt4zdGc/default.jpg'
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=5DzTwbyBhEc',
+                videoLink: 'https://www.youtube.com/embed/5DzTwbyBhEc',
                 videoScreen: 'https://i.ytimg.com/vi/5DzTwbyBhEc/default.jpg'
             },
         ]
@@ -66,23 +66,23 @@ export const videoAnimalsData = [
         animal: 'alligator',
         videos: [
             {
-                videoLink: 'https://www.youtube.com/watch?v=A3Nneq4wCVw',
+                videoLink: 'https://www.youtube.com/embed/A3Nneq4wCVw',
                 videoScreen: 'https://i.ytimg.com/vi/A3Nneq4wCVw/default.jpg'
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=g_673VIf_vA',
+                videoLink: 'https://www.youtube.com/embed/g_673VIf_vA',
                 videoScreen: 'https://i.ytimg.com/vi/g_673VIf_vA/default.jpg'
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=U1bN3-FJD7s',
+                videoLink: 'https://www.youtube.com/embed/U1bN3-FJD7s',
                 videoScreen: 'https://i.ytimg.com/vi/U1bN3-FJD7s/default.jpg'
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=X5Im4mMFK4A',
+                videoLink: 'https://www.youtube.com/embed/X5Im4mMFK4A',
                 videoScreen: 'https://i.ytimg.com/vi/X5Im4mMFK4A/default.jpg'
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=Cnu23SpKTiU',
+                videoLink: 'https://www.youtube.com/embed/Cnu23SpKTiU',
                 videoScreen: 'https://i.ytimg.com/vi/Cnu23SpKTiU/default.jpg'
             },
         ]
@@ -91,27 +91,27 @@ export const videoAnimalsData = [
         animal:'eagle',
         videos:[
             {
-                videoLink: 'https://www.youtube.com/watch?v=RB4RCOe-ZEw',
+                videoLink: 'https://www.youtube.com/embed/RB4RCOe-ZEw',
                 videoScreen: 'https://i.ytimg.com/vi/RB4RCOe-ZEw/default.jpg',
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=XsB-wC24XGc',
+                videoLink: 'https://www.youtube.com/embed/XsB-wC24XGc',
                 videoScreen: 'https://i.ytimg.com/vi/XsB-wC24XGc/default.jpg'
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=rLnd4V8Gfq4',
+                videoLink: 'https://www.youtube.com/embed/rLnd4V8Gfq4',
                 videoScreen: 'https://i.ytimg.com/vi/rLnd4V8Gfq4/default.jpg'
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=hecXupPpE9o',
+                videoLink: 'https://www.youtube.com/embed/hecXupPpE9o',
                 videoScreen: 'https://i.ytimg.com/vi/hecXupPpE9o/default.jpg'
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=VzgJ65pUehQ',
+                videoLink: 'https://www.youtube.com/embed/VzgJ65pUehQ',
                 videoScreen: 'https://i.ytimg.com/vi/VzgJ65pUehQ/default.jpg'
             },
             {
-                videoLink: 'https://www.youtube.com/watch?v=zZpVlhehzVE',
+                videoLink: 'https://www.youtube.com/embed/zZpVlhehzVE',
                 videoScreen: 'https://i.ytimg.com/vi/zZpVlhehzVE/default.jpg'
             }
         ]
@@ -121,27 +121,27 @@ export const videoAnimalsData = [
         videos:[
             {
                 videoScreen: 'https://i.ytimg.com/vi/_Gz5AG5O1xQ/default.jpg',
-                videoLink: 'https://www.youtube.com/watch?v=_Gz5AG5O1xQ'
+                videoLink: 'https://www.youtube.com/embed/_Gz5AG5O1xQ'
             },
             {
                 videoScreen: 'https://i.ytimg.com/vi/Y_ksdk27O8s/default.jpg',
-                videoLink: 'https://www.youtube.com/watch?v=Y_ksdk27O8s'
+                videoLink: 'https://www.youtube.com/embed/Y_ksdk27O8s'
             },
             {
                 videoScreen: 'https://i.ytimg.com/vi/x2H7zcqjplc/default.jpg',
-                videoLink: 'https://www.youtube.com/watch?v=x2H7zcqjplc'
+                videoLink: 'https://www.youtube.com/embed/x2H7zcqjplc'
             },
             {
                 videoScreen: 'https://i.ytimg.com/vi/iY2T4Tsv5zY/default.jpg',
-                videoLink: 'https://www.youtube.com/watch?v=iY2T4Tsv5zY'
+                videoLink: 'https://www.youtube.com/embed/iY2T4Tsv5zY'
             },
             {
                 videoScreen: 'https://i.ytimg.com/vi/yRJQjBt7J_8/default.jpg',
-                videoLink: 'https://www.youtube.com/watch?v=yRJQjBt7J_8'
+                videoLink: 'https://www.youtube.com/embed/yRJQjBt7J_8'
             },
             {
                 videoScreen: 'https://i.ytimg.com/vi/S1TVgKypBwE/default.jpg',
-                videoLink: 'https://www.youtube.com/watch?v=S1TVgKypBwE'
+                videoLink: 'https://www.youtube.com/embed/S1TVgKypBwE'
             }
         ]
     }

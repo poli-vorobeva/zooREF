@@ -3,8 +3,6 @@
 }
 
 .animalPage_videoActive {
-    width: 560px;
-    height: 315px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -13,17 +11,34 @@
 
 .animalPage_videoActiveButton {
     position: absolute;
-    top: 40%;
-    left: 40%;
-    width: 125px;
-    height: 85px;
+    top: 42%;
+    left: 44%;
+    width: 69px;
+    height: 49px;
     border: none;
     outline: none;
-    background-color: #cdc7c7d9;
-    border-radius: 25px;
+    background-color: #232222d9;
+    border-radius: 13px;
     transition: all ease 500ms;
 }
+.animalPage_videoSliderItemButton{
+    position: absolute;
+    top: 27%;
+    left: 33%;
+    width: 69px;
+    height: 49px;
+    border: none;
+    outline: none;
+    background-color: #232222d9;
+    border-radius: 13px;
+    transition: all ease 500ms;
+}
+.animalPageVideo_sliderItem:hover
+.animalPage_videoSliderItemButton{
+    background-color: #ff132cd9;
+    box-shadow: inset 0 0 33px 10px #e1021c;
 
+}
 .animalPage_videoActive:hover .animalPage_videoActiveButton {
     background-color: #ff132cd9;
     box-shadow: inset 0 0 33px 10px #e1021c;
@@ -46,8 +61,6 @@
 }
 
 .animalPageVideo_sliderItem {
-
-    height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

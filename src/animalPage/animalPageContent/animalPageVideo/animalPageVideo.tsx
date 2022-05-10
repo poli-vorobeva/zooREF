@@ -1,22 +1,42 @@
-import React from "react";
+import React, {useState} from "react";
 import {AnimalPageVideoSlider} from "./animalPageVideoSlider/animalPageVideoSlider";
 import {videoAnimalsData} from "../../../animalsData";
 import './animalPageVideo.css'
+
+export const videoFrame=(props:{width:number,height:number,url:string,iframeLoadHandler:()=>void})=>{
+    return(
+        <iframe width={''+props.width} height={''+props.height} src={props.url} title="YouTube video player"
+                onLoad={()=>{
+                    props.iframeLoadHandler()
+                }}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen>
+
+        </iframe>
+    )
+}
+
 export const AnimalPageVideo=(props:{activeAnimal:string})=>{
 const videoData = videoAnimalsData.find(el=>el.animal===props.activeAnimal)
+    const [playVideo,setPlayVideo]=useState(false)
+    const [loadVideo,setLoadVideo]=useState(false)
+    const width= 560
+    const height= 315
+    const iframeLoadHandler=()=>{
+    setLoadVideo(true)
+    }
+    //todo if video loaded do not redraw it
     return(
-        <div className="animalPage-video">
+        <div className="animalPage-video" style={{}}>
             <div className="animalPage_videoActive"
                  style={{
-                     backgroundImage:`url(${videoData.videos[0].videoScreen})`}}>
-                <button className="animalPage_videoActiveButton"></button>
-                {/*<img src={videoData.activeVideo.videoScreen} alt=""/>*/}
-                {/*<iframe width="560" height="315" src={videoData.activeVideo.videoLink}*/}
-                {/*        title="YouTube video player" frameBorder="0"*/}
-                {/*        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"*/}
-                {/*        allowFullScreen>*/}
-
-                {/*</iframe>*/}
+                     width:width+'px',height:height+'px',
+                     backgroundImage:!loadVideo?`url(${videoData.videos[0].videoScreen})`:''}}>
+                {playVideo && videoFrame({width,height,url:videoData.videos[0].videoLink,iframeLoadHandler})}
+                {!loadVideo &&
+                    <button className="animalPage_videoActiveButton"
+                         onClick={() => setPlayVideo(true)}></button>}
             </div>
 
             <AnimalPageVideoSlider videoData={videoData}/>
