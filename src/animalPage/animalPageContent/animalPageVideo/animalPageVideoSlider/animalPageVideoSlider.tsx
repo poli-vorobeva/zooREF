@@ -1,21 +1,30 @@
-import React, {useState} from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import {videoDataType} from "../../../../animalsData";
 import {videoFrame} from "../animalPageVideo";
+import {Button} from "../../../../components/button";
+import {Image} from "../../../../components/image";
 
 export const AnimalPageVideoSlider = (props: { videoData: videoDataType }) => {
     const itemWidth = 180
-    const itemHeight=100
+    const itemHeight = 100
     const itemMargin = 10
     const [displayArrows, setDisplayArrows] = useState(false)
     const [currentPosition, setCurrentPosition] = useState(0)
     const differentWidht = ((itemWidth + itemMargin) * props.videoData.videos.length) - (itemWidth + itemMargin) * 3
-    const [loadVideo,setLoadVideo]=useState(null)
-    const [clickedVideo,setClickedVideo]=useState(null)
-    const loadedVideos=new Set()
-    const iframeLoadHandler=()=>{
+    const [loadVideo, setLoadVideo] = useState<number>(null)
+    const [clickedVideo, setClickedVideo] = useState<number>(null)
+
+    const [loadedVideos, addLoaderVideos]= useState<number[]>([])
+
+    const iframeLoadHandler = () => {
         setLoadVideo(clickedVideo)
-        loadedVideos.add(clickedVideo)
-    }
+        addLoaderVideos((prev) => {
+            if(!prev.find((el)=>el===clickedVideo)){
+                return [...prev,clickedVideo]
+            }
+            return prev
+        })
+     }
     const scroll = (direction: string) => {
         const item = itemWidth + itemMargin
         if (direction === 'left') {
@@ -23,7 +32,7 @@ export const AnimalPageVideoSlider = (props: { videoData: videoDataType }) => {
                 setCurrentPosition(currentPosition + item)
             }
         } else {
-            if (Math.abs(currentPosition - item*2) <= differentWidht) {
+            if (Math.abs(currentPosition - item * 2) <= differentWidht) {
                 setCurrentPosition(currentPosition - item)
             }
         }
@@ -42,24 +51,30 @@ export const AnimalPageVideoSlider = (props: { videoData: videoDataType }) => {
             >
                 {props.videoData.videos.map((vid, ind) => {
                     if (ind === 0) return
+
+                    if(loadedVideos.includes(ind)){
+                        console.log("YET")
+                    }
                     return (
                         <div className="animalPageVideo_sliderItem"
                              style={{
-                                 backgroundImage: (loadVideo!==ind)
-                                     ?`url(${vid.videoScreen})`
-                                     :(loadVideo && clickedVideo===ind)&&'',
+                                 backgroundImage: (loadVideo !== ind)
+                                     ? `url(${vid.videoScreen})`
+                                     : (loadVideo && clickedVideo === ind)|| loadedVideos.includes(ind) && '',
                                  width: `${itemWidth}px`,
-                                 height:`${itemHeight}px`,
+                                 height: `${itemHeight}px`,
                                  marginRight: `${itemMargin}px`
                              }}>
-                            {clickedVideo===ind && videoFrame({width:itemWidth,height:itemHeight,
-                                url:vid.videoLink,iframeLoadHandler})}
+                            {
+                                (clickedVideo === ind || loadedVideos.includes(ind)) && videoFrame({
+                                    width: itemWidth, height: itemHeight, url: vid.videoLink, iframeLoadHandler
+                                })
+                            }
 
-                            {clickedVideo!==ind && <button
-                                className="animalPage_videoSliderItemButton"
-                                onClick={() => {
-                                    setClickedVideo(ind)
-                                }}></button>}
+                            {
+                                !loadedVideos.includes(ind) && <Button class={"animalPage_videoSliderItemButton"}
+                                                                clickHandler={() => setClickedVideo(ind)}/>
+                            }
                         </div>
                     )
 
@@ -70,10 +85,9 @@ export const AnimalPageVideoSlider = (props: { videoData: videoDataType }) => {
                  onMouseEnter={() => setDisplayArrows(true)}
                  onMouseLeave={() => setDisplayArrows(false)}>
                 {
-                    displayArrows && <img
-                        src="./public/assets/svg/arrowSlider.svg"
-                        alt=""
-                        onClick={() => scroll('left')}/>
+                    displayArrows &&
+                    <Image src="./public/assets/svg/arrowSlider.svg" alt="" clickHandler={() => scroll('left')}/>
+
                 }
             </div>
             <div className="animalPageVideo_sliderRight"
@@ -81,10 +95,8 @@ export const AnimalPageVideoSlider = (props: { videoData: videoDataType }) => {
                  onMouseLeave={() => setDisplayArrows(false)}
             >
                 {
-                    displayArrows && <img
-                        src="./public/assets/svg/arrowSlider.svg"
-                        alt=""
-                        onClick={() => scroll('right')}/>
+                    displayArrows &&
+                    <Image src="./public/assets/svg/arrowSlider.svg" alt="" clickHandler={() => scroll('right')}/>
                 }
             </div>
         </div>

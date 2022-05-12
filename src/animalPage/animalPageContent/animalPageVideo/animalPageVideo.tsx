@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {AnimalPageVideoSlider} from "./animalPageVideoSlider/animalPageVideoSlider";
 import {videoAnimalsData} from "../../../animalsData";
 import './animalPageVideo.css'
+import {Button} from "../../../components/button";
 
 export const videoFrame=(props:{width:number,height:number,url:string,iframeLoadHandler:()=>void})=>{
     return(
@@ -35,8 +36,8 @@ const videoData = videoAnimalsData.find(el=>el.animal===props.activeAnimal)
                      backgroundImage:!loadVideo?`url(${videoData.videos[0].videoScreen})`:''}}>
                 {playVideo && videoFrame({width,height,url:videoData.videos[0].videoLink,iframeLoadHandler})}
                 {!loadVideo &&
-                    <button className="animalPage_videoActiveButton"
-                         onClick={() => setPlayVideo(true)}></button>}
+                    <Button class="animalPage_videoActiveButton" clickHandler={() => setPlayVideo(true)}/>
+                }
             </div>
 
             <AnimalPageVideoSlider videoData={videoData}/>

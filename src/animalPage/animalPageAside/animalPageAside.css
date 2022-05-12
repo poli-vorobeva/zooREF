@@ -41,6 +41,12 @@
     top: 10%;
     left: 10%;
 }
+.animalPage_slideUp{
+    transform: rotate(90deg);
+}
+.animalPage_slideDown{
+    transform: rotate(270deg);
+}
 .asideSliderItem-active{
     background: linear-gradient(to right, red, orange);
     border-radius: 50%;
@@ -50,8 +56,8 @@
     border-radius: 50%;
     width: 90%;
     height: 90%;
-    background: #ff6305;
-    mix-blend-mode: exclusion;
+    background: #fff;
+    mix-blend-mode:lighten ;
     position: absolute;
     top: 5%;
     left: 5%;

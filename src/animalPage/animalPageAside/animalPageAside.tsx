@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import './animalPageAside.css'
 import {animalDataType} from "../animalPage";
+import {Image} from "../../components/image";
 
 type asideAnimal = {
     animal: string,
@@ -13,12 +14,10 @@ export const AnimalPageAside = (props: { animals: asideAnimal[], currentActiveAn
     const elementPadding = 20
     const [currentPosition, setCurrentPosition] = useState(0)
     const different = (elementHeight + elementPadding) * props.animals.length - (elementHeight + elementPadding) * 3
-    console.log(different)
-    const [displayArrows, setDisplayArrows] = useState(false)
+     const [displayArrows, setDisplayArrows] = useState(false)
 
     const scroll = (direction: string) => {
         const item = elementWidth + elementPadding
-        console.log(direction)
         if (direction === 'up') {
             if (Math.abs(currentPosition + item) < different && (currentPosition + item) <= 0) {
                 setCurrentPosition(currentPosition + item)
@@ -38,10 +37,8 @@ export const AnimalPageAside = (props: { animals: asideAnimal[], currentActiveAn
             <div className="animalPage_slideUp"
                  onClick={() => scroll('up')}>
                 {
-                    displayArrows && <img
-                        src="./public/assets/svg/arrowSlider.svg"
-                        alt=""
-                    />
+                    displayArrows &&
+                    <Image src="./public/assets/svg/arrowSlider.svg" alt=""/>
                 }
             </div>
             <div className="animalPage_asideContainer"
@@ -53,7 +50,7 @@ export const AnimalPageAside = (props: { animals: asideAnimal[], currentActiveAn
                      }}>
 
                     {props.animals.map((el, ind) => {
-                        return <div className="asideSliderItem" key={ind} style={{
+                        return <div className={ind===0?"asideSliderItem asideSliderItem-active":"asideSliderItem"} key={ind} style={{
                             width: elementWidth + 'px',
                             height: elementHeight + 'px',
                             margin: elementPadding + 'px'
@@ -61,6 +58,7 @@ export const AnimalPageAside = (props: { animals: asideAnimal[], currentActiveAn
                             <div>
 
                             </div>
+
                             <img alt={el.animal} src={el.imgSrc}/>
 
                         </div>
