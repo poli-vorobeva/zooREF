@@ -64,10 +64,11 @@ header {
     list-style: none;
 }
 
-.header-nav ul li a {
+.header-nav ul li {
     text-decoration: none;
     letter-spacing: 2px;
     color: var(--header-color);
+    cursor: pointer;
 }
 
 .nav-item {

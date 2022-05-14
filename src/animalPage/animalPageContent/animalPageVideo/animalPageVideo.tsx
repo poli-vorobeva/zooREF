@@ -36,7 +36,7 @@ const videoData = videoAnimalsData.find(el=>el.animal===props.activeAnimal)
                      backgroundImage:!loadVideo?`url(${videoData.videos[0].videoScreen})`:''}}>
                 {playVideo && videoFrame({width,height,url:videoData.videos[0].videoLink,iframeLoadHandler})}
                 {!loadVideo &&
-                    <Button class="animalPage_videoActiveButton" clickHandler={() => setPlayVideo(true)}/>
+                    <Button class="animalPage_videoActiveButton_active" clickHandler={() => setPlayVideo(true)}/>
                 }
             </div>
 

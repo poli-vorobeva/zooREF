@@ -87,3 +87,15 @@
     right: 15px;
 
 }
+.animalPage_videoActive>button{
+    position: absolute;
+    top: 42%;
+    left: 46%;
+    width: 69px;
+    height: 49px;
+    border: none;
+    outline: none;
+    background-color: #232222d9;
+    border-radius: 13px;
+    transition: all ease 500ms;
+}
