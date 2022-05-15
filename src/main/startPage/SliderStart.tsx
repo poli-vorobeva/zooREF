@@ -10,11 +10,12 @@ interface ISliderStartItem {
     text: string,
     onClickHandler: (index: number) => void,
     isActive: boolean,
-    width: number
+    width: number,
+    onDrawPage:()=>void
 }
 
 
-const SliderButtons = () => {
+const SliderButtons = (props:{onDrawPage:()=>void}) => {
     return (
         <div className="slider-figcaption__buttons">
             <Button
@@ -22,6 +23,7 @@ const SliderButtons = () => {
                 text="Watch online"
                 link="#"
                 svgPath="url(./public/assets/svg/sliderPlayButton.svg)"
+                clickHandler={props.onDrawPage}
             />
             <Button
                 cls="slider-figcaption__button pets-in-zoo__slider-button slider-figcaption__button-donate"
@@ -46,7 +48,7 @@ const SliderItem = (props: ISliderStartItem) => {
                 <span>
                     {props.text}
                 </span>
-                    <SliderButtons/>
+                    <SliderButtons onDrawPage={props.onDrawPage}/>
                 </figcaption>
             </div>
         </figure>
@@ -74,14 +76,16 @@ const SliderLine = (props: Record<string, number>) => {
     )
 }
 
-export const SliderStart = () => {
+export const SliderStart = (props:{drawPage:(page:string)=>void}) => {
     const [activeSlide, setActiveSlide] = useState(0)
     const [translate, setTranslate] = useState(0)
 
     function handle(value: number) {
         click(value - 1)
     }
-
+const changPage=(page:string)=>{
+    props.drawPage(page)
+}
     const rangeProps = {
         containerClass: 'range__container start__range',
         numberClass: 'slider__number start__number',
@@ -113,6 +117,7 @@ export const SliderStart = () => {
                         {
                             sliderItemsArray.map((it, ind) => {
                                 return <SliderItem index={ind} imgSrc={it.src} text={it.text}
+                                                   onDrawPage={()=>changPage(it.animal)}
                                                    onClickHandler={click.bind(this)}
                                                    isActive={ind === activeSlide}
                                                    width={itemWidth}/>

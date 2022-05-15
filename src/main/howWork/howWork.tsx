@@ -6,7 +6,7 @@ import {HowWorkSlider} from "./HowWorkSlider";
 import {useState} from "react";
 import {HowWrkText} from "./HowWorkText";
 
-export const HowWork = () => {
+export const HowWork = (props:{ drawPage:(page:string)=>void}) => {
     const [currentRangeValue, setCurrentRangeValue] = useState('01')
     const rangeProps = {
         containerClass: 'range__container how-work__range-container',
@@ -20,6 +20,7 @@ export const HowWork = () => {
         imgSrc: './public/assets/svg/playCircle.svg',
         text: 'Watch online',
         href: '#',
+        clickHandler:(page:string)=>props.drawPage(page)
     }
     const onClicked = (indx: number) => {
         setCurrentRangeValue(`0${indx}`)

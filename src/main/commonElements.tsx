@@ -1,43 +1,52 @@
 import * as React from "react";
 export const sliderItemsArray = [
     {
+        animal:'panda',
         text: '1Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.',
         src: "./public/assets/sliderStart/1.png"
     },
     {
+        animal:'eagle',
         text: '2Eagle in Callifornia  He is 2 years old. Bei Bei is from China. He loves bamboos. ',
         src: "./public/assets/sliderStart/2.png"
     },
     {
-        text: '3Eagle in Callifornia  He is 2 years old. Bei Bei is from China. He loves bamboos. ',
-        src: "./public/assets/sliderStart/3.png"
-    },
-    {
-        text: '4Eagle in Callifornia  He is 2 years old. Bei Bei is from China. He loves bamboos. ',
+        animal:'alligator',
+        text: '3alligator in Callifornia  He is 2 years old. Bei Bei is from China. He loves bamboos. ',
         src: "./public/assets/sliderStart/4.png"
     },
     {
-        text: '5Eagle in Callifornia  He is 2 years old. Bei Bei is from China. He loves bamboos. ',
+        animal:'gorilla',
+        text: '4gorilla in Callifornia  He is 2 years old. Bei Bei is from China. He loves bamboos. ',
+        src: "./public/assets/sliderStart/3.png"
+    },
+    {
+        animal:'panda',
+        text: '5panda in Callifornia  He is 2 years old. Bei Bei is from China. He loves bamboos. ',
         src: "./public/assets/sliderStart/1.png"
     },
     {
+        animal:'eagle',
         text: '6Eagle in Callifornia  He is 2 years old. Bei Bei is from China. He loves bamboos. ',
         src: "./public/assets/sliderStart/2.png"
     },
     {
-        text: '7Eagle in Callifornia  He is 2 years old. Bei Bei is from China. He loves bamboos. ',
-        src: "./public/assets/sliderStart/3.png"
+        animal:'alligator',
+        text: '7alligator in Callifornia  He is 2 years old. Bei Bei is from China. He loves bamboos. ',
+        src: "./public/assets/sliderStart/4.png"
     },
     {
-        text: '8Eagle in Callifornia  He is 2 years old. Bei Bei is from China. He loves bamboos. ',
-        src: "./public/assets/sliderStart/4.png"
+        animal:'gorilla',
+        text: '8gorilla in Callifornia  He is 2 years old. Bei Bei is from China. He loves bamboos. ',
+        src: "./public/assets/sliderStart/3.png"
     }
 ]
 export interface ISliderStartButton {
     cls: string,
     text: string,
     link: string,
-    svgPath: string
+    svgPath: string,
+    clickHandler?:(data?:string)=>void
 }
 export interface IRange {
     containerClass: string,
@@ -53,6 +62,7 @@ export interface IButtonPrimary {
     imgSrc?: string,
     text: string,
     href?: string,
+    clickHandler?: (zoos: string)=>void
 }
 export const SliderRange = (props: IRange) => {
     return (
@@ -73,7 +83,7 @@ export const SliderRange = (props: IRange) => {
 export const Button = (props: ISliderStartButton) => {
     return (
         <div className="start-slider-buttonWrapper">
-            <button className={props.cls}>
+            <button className={props.cls} onClick={()=>props.clickHandler()}>
                 <a href={props.link}>
                     <span className="start-page-slider-watch" style={{ backgroundImage: props.svgPath }}></span>
                 </a>
@@ -87,7 +97,8 @@ export const Button = (props: ISliderStartButton) => {
 }
 export const ButtonPrimary = (props: IButtonPrimary) => {
     return (
-        <button className={props.buttonClass}>
+        <button className={props.buttonClass}
+        onClick={()=>props.clickHandler('zoos')}>
             {props.imgSrc && <img src={props.imgSrc} />}
             <span>{props.text}</span>
             {props.href && <a href={props.href}></a>}

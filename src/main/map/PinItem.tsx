@@ -29,10 +29,12 @@ const PinItem = (props: {
     imgUrl: string,
     region: string,
     population: string
-  }
+  },
+  drawPage:(page:string)=>void
 }) => {
   return (
-    <div key={props.item.id} className={`pin__wrapper__item item__${props.item.name}`}>
+    <div key={props.item.id} className={`pin__wrapper__item item__${props.item.name}`}
+    onClick={()=>props.drawPage(props.item.name)}>
       <div className={`pin__icon pin__icon-${props.item.name}`}>
         <img src={props.item.imgUrl}   className='pin-icon__image' alt={props.item.name} />
         <PinSvg />

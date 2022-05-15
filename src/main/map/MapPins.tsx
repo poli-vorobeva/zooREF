@@ -1,7 +1,7 @@
 import React from "react"
 import PinItem from './PinItem'
 
-const MapPins = () => {
+const MapPins = (props:{drawPage:(pge:string)=>void}) => {
     const animalsArray = [
         {
             id: 1,
@@ -12,7 +12,7 @@ const MapPins = () => {
 
         }, {
             id: 2,
-            name: 'aligator',
+            name: 'alligator',
             imgUrl: "./public/assets/map-slider/5.png",
             region: 'on an island near Los Angeles',
             population: 'more than 270 pairs in 2013'
@@ -24,7 +24,7 @@ const MapPins = () => {
             population: 'more than 270 pairs in 2013'
         }, {
             id: 4,
-            name: 'monkey',
+            name: 'gorilla',
             imgUrl: "./public/assets/map-slider/2.png",
             region: 'on an island near Los Angeles',
             population: 'more than 270 pairs in 2013'
@@ -33,7 +33,7 @@ const MapPins = () => {
         <div className="map__pin-wrapper">
             {
                 animalsArray.map((item) => {
-                    return <PinItem item={item}/>
+                    return <PinItem item={item} drawPage={props.drawPage}/>
                 })
             }
         </div>

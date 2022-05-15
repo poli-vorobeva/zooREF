@@ -16,7 +16,11 @@
     top: 0;
     left: 0;
 }
-
+.pin__icon:hover ~ .pin-card>.pin-card__wrapper{
+    position: relative;
+ z-index: 10;
+    display: block;
+}
 .pin-card__title p {
     margin: 2%;
     text-transform: uppercase;
@@ -56,12 +60,12 @@
     display: flex;
 }
 
-.item__aligator {
+.item__alligator {
     top: 13%;
     left: 16%;
 }
 
-.item__monkey {
+.item__gorilla {
     left: 42%;
     top: 32%;
 }

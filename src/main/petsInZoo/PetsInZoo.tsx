@@ -2,46 +2,13 @@ import * as React from "react";
 import './PetsInZoo.css'
 import {Button, ButtonPrimary, slideClick, sliderItemsArray, SliderRange} from "../commonElements";
 import {useEffect, useState} from "react";
+import {PetsInZooSliderItem} from "./PetsInZooItem";
+import {SliderButton} from "./SliderButton";
 
-interface ISliderItem {
-    index: number,
-    imgSrc: string,
-    text: string,
-    width: number,
-    margin: number
-}
 
-const SliderItem = (props: ISliderItem) => {
-    return (
-        <figure className={'petsInZoo-figcaption'}
-                data-index={props.index}
-                style={{width: props.width + "px", margin: props.margin + "px"}}>
-            <div className="petsInZoo-itemContent">
-                <img src={props.imgSrc} style={{width: props.width + "px"}}/>
-                <figcaption className="">
-                <span>
-                    {props.text}
-                </span>
-                    <div className={'petsInZoo-sliderButtons'}>
-                        <Button cls={'petsInZoo-itemButton-watch'}
-                                text="Watch online"
-                                link="#"
-                                svgPath="url(./public/assets/svg/sliderPlayButton.svg)"/>
-                        <Button
-                            cls="petsInZoo-itemButton-donate"
-                            text="Donate"
-                            link="#"
-                            svgPath="url(./public/assets/svg/sliderDonateButton.svg)"
-                        />
-                    </div>
-                </figcaption>
-            </div>
-        </figure>
 
-    )
-}
 const PetsInZooSliderBlock = (props: {
-    start: number, width: number, margin: number
+    start: number, width: number, margin: number,changePage:(page:string)=>void
 }) => {
 
     return (
@@ -49,13 +16,16 @@ const PetsInZooSliderBlock = (props: {
             {
                 sliderItemsArray.map((e, i) => {
                     if (i >= props.start && i <= props.start + 3) {
+                        console.log(e)
                         return (
-                            <SliderItem
+                            <PetsInZooSliderItem
+                                animal={e.animal}
                                 index={i}
                                 imgSrc={e.src}
                                 text={e.text}
                                 width={props.width}
                                 margin={props.margin}
+                                handleChangePage={props.changePage}
                             />
                         )
                     }
@@ -64,7 +34,7 @@ const PetsInZooSliderBlock = (props: {
         </div>
     )
 }
-export const PetsInZoo = () => {
+export const PetsInZoo = (props:{drawPage:(page:string)=>void}) => {
     const itemWidth = 270
     const margin = 15
     const [countNumber,setCountNumber]=useState('02')
@@ -144,6 +114,7 @@ export const PetsInZoo = () => {
                       {
                         slides.map((s, index) => {
                           return <PetsInZooSliderBlock start={s} width={itemWidth} margin={margin}
+                                                       changePage={props.drawPage}
                           />
                         })
                       }
@@ -152,16 +123,9 @@ export const PetsInZoo = () => {
                 </div>
                 <SliderRange {...rangeProps}/>
                 <ButtonPrimary buttonClass={'btnPrimary'} text={'choose your favorite'} href={'#'}/>
-              <div className="pets-in-zoo-slider__left">
-                <button onClick={() => buttonClick('left')}>
-                  <img src="./public/assets/svg/arrowSlider.svg" alt=""/>
-                </button>
-              </div>
-              <div className="pets-in-zoo-slider__right">
-                <button onClick={() => buttonClick('right')}>
-                  <img src="./public/assets/svg/arrowSlider.svg" alt=""/>
-                </button>
-              </div>
+                <SliderButton class="pets-in-zoo-slider__left" direction='left' buttonClick={buttonClick}/>
+                <SliderButton class="pets-in-zoo-slider__right" direction='right' buttonClick={buttonClick}/>
+
             </div>
         </article>
     )
