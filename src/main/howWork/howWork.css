@@ -62,3 +62,11 @@
     flex-flow: column nowrap;
     align-items: center;
 }
+@media (max-width: 320px) {
+    .how-work__wrapper {
+        width: 90%;
+    }
+    .howWork__button{
+        left: unset;
+    }
+}

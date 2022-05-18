@@ -92,3 +92,18 @@
     padding-right: 10px;
     list-style: none;
 }
+@media (max-width: 320px) {
+    .footer__nav-adaptive-list {
+        flex-flow: column;
+    }
+    .footer__nav-adaptive-list li{
+        text-align: end;
+    }
+    .footer__form, .footer__menu {
+        padding: 6px;
+    }
+    .footer__button button{
+        transform: scale(0.6);
+        left: -50px;
+    }
+}

@@ -39,7 +39,7 @@ export const SliderStart = (props: { drawPage: (page: string) => void }) => {
 
     return (
         <Fragment>
-            <div className="start-page-slider slider">
+            <div className="start-page-slider">
                 <div className="slider-content_hide" style={{left: itemWidth / 2 + 'px'}}>
                     <SliderLine translate={translate * itemWidth / 2}/>
                    <StartSliderWrapper

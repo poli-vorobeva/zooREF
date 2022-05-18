@@ -16,7 +16,7 @@ export const HowWork = (props:{ drawPage:(page:string)=>void}) => {
         totalNumber: '08'
     }
     const buttonProps = {
-        buttonClass: 'start-page__button btnPrimary',
+        buttonClass: 'howWork__button btnPrimary',
         imgSrc: './public/assets/svg/playCircle.svg',
         text: 'Watch online',
         href: '#',

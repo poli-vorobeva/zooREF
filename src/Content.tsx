@@ -6,6 +6,7 @@ import {AnimalPage} from "./animalPage/animalPage";
 
 export const Content = () => {
 	//--text-color:#030303-light   #fff-dark
+	const [screenWidth, setScreenWidth] = useState(document.body.offsetWidth)
 	const [colorTheme, setColorTheme] = useState('light')
 	const switchTheme = () => {
 		colorTheme === 'light' ? setColorTheme('dark') : setColorTheme('light')
@@ -20,21 +21,21 @@ export const Content = () => {
 	}
 	const [currentPage, setCurrentPage] = useState('main')
 	const drawPage = (page: string) => {
-		console.log(page, '-------------^^^^^')
-		//  const animals=page==='eagle'
 		const pg = page === 'about' ? 'main' : page
-
 		setCurrentPage(pg)
-		console.log(currentPage, '$%$%')
+	}
+	console.log(screenWidth)
+	window.onresize = (e) => {
+		setScreenWidth(document.body.offsetWidth)
+		console.log(screenWidth)
 	}
 	//todo to rerender scroll 0
 	//todo if not animal then panda
-	console.log("rerender----------------------")
 	return (
 		<>
 			<Header drawPage={drawPage} switchTheme={switchTheme}/>
 			{
-				currentPage === 'main' ? <Main drawPage={drawPage}/>
+				currentPage === 'main' ? <Main drawPage={drawPage} screenWidth={screenWidth}/>
 					: currentPage === 'zoos' || currentPage === 'panda' ? <AnimalPage animal={''} drawPage={drawPage}/>
 					: currentPage === 'eagle' ? <AnimalPage animal={'eagle'} drawPage={drawPage}/>
 						: currentPage === 'gorilla' ? <AnimalPage animal={'gorilla'} drawPage={drawPage}/>

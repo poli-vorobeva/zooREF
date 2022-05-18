@@ -9,14 +9,14 @@ import {Testimonials} from "./testimonials/Testimonials";
 import {Map} from "./map/Map";
 import {Header} from "../header/Header";
 
-export const Main = (props:{ drawPage:(page:string)=>void}) => {
+export const Main = (props:{ drawPage:(page:string)=>void, screenWidth:number}) => {
     return (
         <main className="landing__main" data-testid={'main'}>
             <StartPage drawPage={props.drawPage}/>
             <HowWork drawPage={props.drawPage}/>
-            <PetsInZoo drawPage={props.drawPage}/>
+            <PetsInZoo drawPage={props.drawPage} screenWidth={props.screenWidth}/>
             <PayAndFeed/>
-            <Testimonials/>
+            <Testimonials screenWidth={props.screenWidth}/>
             <Map drawPage={props.drawPage}/>
         </main>
     )

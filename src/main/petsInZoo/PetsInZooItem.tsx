@@ -7,21 +7,22 @@ interface ISliderItem {
     text: string,
     width: number,
     margin: number,
-    handleChangePage:(page:string)=>void
+    handleChangePage:(page:string)=>void,
+    screenWidth:number
 }
 
 export const PetsInZooSliderItem = (props: ISliderItem) => {
-
     const changePage=()=>{
-        console.log("***")
         props.handleChangePage(props.animal)
     }
     return (
         <figure className={'petsInZoo-figcaption'}
                 data-index={props.index}
-                style={{width: props.width + "px", margin: props.margin + "px"}}>
+                style={{width: props.width + "px", margin: props.margin + "px",
+                height:props.screenWidth<=320?props.width*4+'px':'unset'}}>
             <div className="petsInZoo-itemContent">
-                <img src={props.imgSrc} style={{width: props.width + "px"}}/>
+                <img src={props.imgSrc} style={{width: props.width + "px",
+                    height:props.screenWidth<=320?props.width*4+'px':'unset'}}/>
                 <figcaption className="">
                 <span>
                     {props.text}

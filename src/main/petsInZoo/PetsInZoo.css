@@ -89,3 +89,24 @@
     flex-flow: row nowrap;
     justify-content: space-between;
 }
+.pets-in-zoo-slider__left>button,.pets-in-zoo-slider__right>button{
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    mix-blend-mode: plus-lighter;
+}
+@media (max-width: 320px) {
+    .pets-in-zoo {
+        height: 600px;
+    }
+    .pets-in-zoo__slider-hide__wrapper{
+        left: unset;
+    }
+    .pets-in-zoo-slider__left{
+        top: 45%;
+    }
+    .pets-in-zoo-slider__right{
+        top:40%
+    }
+
+}

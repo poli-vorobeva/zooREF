@@ -57,9 +57,6 @@
         padding-bottom: 30px;
         overflow: hidden;
     }
-    .start-page__button {
-        margin-top: 3vw;
-    }
     .dot-second {
         margin-left: -150px;
     }
@@ -68,10 +65,6 @@
         font-size: calc(12px + 10vw);
         /*min-font-size: 64px;*/
         letter-spacing: 2px;
-    }
-    .start-page__wrapper {
-        width: 75%;
-        overflow: unset;
     }
     .start-page__content {
         padding-left: 0;
@@ -93,10 +86,6 @@
     .start-page {
         padding-bottom: 70px;
     }
-    .start-page__wrapper {
-        width: 94%;
-        margin-bottom: 68px;
-    }
     .start-page__title p {
         font-size: 10vw;
         line-height: 11vw;
@@ -107,18 +96,12 @@
     .start-page__title p {
         font-size: 10vw;
     }
-    .start-page__button {
-        margin-top: -30px;
-    }
     .start-page__title p {
         width: 95vw;
         font-size: 10vw;
         line-height: 12vw;
         padding-top: 55px;
         letter-spacing: 0;
-    }
-    .start-page .start-page__button {
-        margin-top: -30px;
     }
 }
 
@@ -130,16 +113,16 @@
     .start-page {
         padding-bottom: unset;
         overflow-x: hidden;
-    }
-    .start-page__button {
-        top: 12px;
-    }
-    .start-page__wrapper {
-        margin-bottom: 43px;
+        height: 900px;
     }
     .start-page__title p {
         font-size: 15vw;
         letter-spacing: 0.5px;
         line-height: 19vw;
+    }
+    .start__range {
+        width: 220px;
+        position: relative;
+        top: 50px;
     }
 }

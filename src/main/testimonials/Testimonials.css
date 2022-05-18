@@ -72,3 +72,8 @@
 .ts-el-content p {
     text-align: center;
 }
+@media (max-width: 320px) {
+    .testimonials-slider{
+        transform: scale(0.7);
+    }
+}

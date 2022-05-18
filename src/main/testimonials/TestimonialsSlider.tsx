@@ -20,9 +20,7 @@ const TestimonialsSlider = (props:{itemWidth:number}) => {
       setTransition('none')
       setTransform('translate(0)')
       setSlides((prev) => {
-        console.log(direction)
-        const newAr = prev.slice()
-        console.log(newAr, 'newAr')
+       const newAr = prev.slice()
         if (newAr.length > 1) {
           direction === 'left' ? newAr.shift() : newAr.pop()
         }
@@ -83,4 +81,5 @@ const TestimonialsSlider = (props:{itemWidth:number}) => {
     </div>
   )
 }
+//todo slider thansitionend=>button disabled
 export default TestimonialsSlider

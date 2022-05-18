@@ -52,7 +52,7 @@
 }
 
 @media ( max-width: 320px) {
-    /*.start-page__aside {*/
-    /*  display: none;*/
-    /*}*/
+    .start-page__aside {
+      left: unset;
+    }
 }

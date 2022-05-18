@@ -3,9 +3,9 @@ import './Testimonials.css'
 import { ButtonPrimary, slideClick, SliderRange } from "../commonElements";
 import { useState } from "react";
 import TestimonialsSlider from "./TestimonialsSlider";
-export const Testimonials = () => {
+export const Testimonials = (props:{screenWidth:number}) => {
 const itemsLength=2
-  const itemWidth = 700
+  const itemWidth = props.screenWidth<=320?200:700
   return (
     <article className="testimonials">
       <div className="testimonials-wrapper">

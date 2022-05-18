@@ -1,3 +1,8 @@
+@media screen and (max-width: 320px) {
+    .header-nav{
+        display: none;
+    }
+}
 header {
     --header-background: #333333;
     --header-color: #F0F0F0;
