@@ -1,9 +1,16 @@
+@media (max-width:1100px) {
+    .animalPage_wrapper{
+     height: unset;
+    }
+}
 .animalPage_wrapper {
     display: flex;
     flex-flow: row nowrap;
     width: 100vw;
     /*background-color: green;*/
     height: 90vh;
+    background: var(--base-color);
+    color: var(--text-color);
 }
 
 .animalPage_aside {

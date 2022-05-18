@@ -1,5 +1,5 @@
 import {Aside} from "./asideStart/Aside";
-import {SliderStart} from "./SliderStart";
+import {SliderStart} from "./sliderStart/SliderStart";
 import * as React from "react";
 import './StartPage.css'
 

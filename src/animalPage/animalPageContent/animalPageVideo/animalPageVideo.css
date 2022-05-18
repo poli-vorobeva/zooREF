@@ -1,3 +1,11 @@
+@media (max-width: 1100px) {
+    .animalPage_videoActive{
+        transform: scale(0.7);
+    }
+    .animalPageVideo_sliderWrapper{
+        transform: scale(0.7);
+    }
+}
 .animalPage-video {
     width: 80%;
 }

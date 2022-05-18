@@ -50,8 +50,9 @@
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
-    background: aliceblue;
-    box-shadow: 0 0 10px 7px aliceblue;
+    background: var(--gray-text-color);
+    box-shadow: 0 0 10px 7px var(--gray-color);
+    color: var(--light-color);
     align-items: center;
 }
 

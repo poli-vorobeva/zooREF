@@ -15,6 +15,7 @@
     flex-flow: column;
     justify-content: space-evenly;
     align-items: center;
+    color:var(--text-color)
 }
 
 .our-mission__item img {

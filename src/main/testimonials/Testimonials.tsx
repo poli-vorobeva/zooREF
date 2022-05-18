@@ -12,7 +12,7 @@ const itemsLength=2
         <h2 className="title">Testimonials</h2>
        <TestimonialsSlider itemWidth={itemWidth}/>
         <SliderRange containerClass={'range__container testimonials__range'}
-          numberClass={'counts'}
+          numberClass={'number-toggle-light'}
           rangeWrapperClass={'range__dark range__wrapper'}
           startNumber={'' + 1} totalNumber={'' + itemsLength} />
         <ButtonPrimary buttonClass={'btnPrimary'} text={'LEAVE FEEDBACK'} />

@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-    <style>{ white-space:pre } { fill: none;stroke: #ffffff } { fill: #ffffff }</style>
+    <style>{ white-space:pre } { fill:none ;stroke: white}
+        { fill: none }</style>
     <path id="Layer" class="shp0"
           d="M12 23.5C5.64 23.5 0.5 18.36 0.5 12C0.5 5.64 5.64 0.5 12 0.5C18.36 0.5 23.5 5.64 23.5 12C23.5 18.36 18.36 23.5 12 23.5Z"/>
     <path id="Layer" class="shp1"

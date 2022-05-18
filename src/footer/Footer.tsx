@@ -7,7 +7,7 @@ export const Footer=()=>{
                 <div className="footer__form">
                     <div className="header__logo footer__logo">
                         <a href="#logo">
-                            <img src="./assets/light-white.svg" alt="logo"/>
+                            <img src="./public/assets/svg/logoLight.svg" alt="logo"/>
                         </a>
                     </div>
                     <form id="form__contact">

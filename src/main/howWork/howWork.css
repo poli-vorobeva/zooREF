@@ -40,6 +40,7 @@
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
+    color:var(--text-color)
 }
 
 .how-work__content p {

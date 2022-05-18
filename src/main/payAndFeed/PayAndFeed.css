@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background: #616161;
+    background: var(--gray-color);
 }
 
 .pay-and-feed__wrapper {
@@ -12,8 +12,12 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
+    color:var(--gray-text-color)
 }
+.pay-and-feed__wrapper .pay-and-feed__title{
 
+    color:var(--gray-text-color)
+}
 .pay-and-feed .btnPrimary {
     margin: 0 auto;
 }
@@ -33,7 +37,7 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    border: 4px solid white;
+    border: 4px solid var(--gray-text-color);
     border-radius: 50%;
 }
 

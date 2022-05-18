@@ -1,19 +1,28 @@
 @import './range.css';
 
+
 * {
     box-sizing: border-box;
     margin: 0;
     bottom: 0;
-    --text-color: #030303;
+
 }
 
 body {
     width: 100vw;
-}
+    --text-color: #030303;
+    --base-color:#FFFFFF;
+--gray-color:#f0f0f0;
 
+    --light-color:#FFF;
+    --gray-text-color: #333333;
+}
+.container{
+    background:var(--base-color)
+}
 .title {
     margin: 25px auto;
-    width: 790px;
+
     height: 56px;
     font-family: "Roboto", sans-serif;
     font-style: normal;
@@ -45,7 +54,7 @@ body {
     line-height: 21px;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--base-color);
     transition: all ease-in 250ms;
 }
 
@@ -76,7 +85,7 @@ width: 200px;
     border: 0;
     //background: #1fd9ea;
     background: #03ccc8;
-    color: #feffff;
+    color: var(--light-color);
     text-transform: uppercase;
     letter-spacing: .25em;
     outline: none;
@@ -140,4 +149,13 @@ width: 200px;
 
 .animateButton:hover .button__vertical {
     transform: scaleY(0);
+}
+.number-light{
+    color:var(--light-color)
+}
+.number-toggle-light{
+    color:var(--text-color)
+}
+.number-toggle-light b,.number-light b{
+    font-size: 2rem;
 }

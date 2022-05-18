@@ -44,7 +44,7 @@ export const PetsInZoo = (props:{drawPage:(page:string)=>void}) => {
     const [transform, setTransform] = useState('')
     const rangeProps = {
         containerClass: 'range__container pets-in-zoo__range',
-        numberClass: 'pets-in-zoo__number counts',
+        numberClass: 'number-toggle-light',
         rangeWrapperClass: 'range__dark range__wrapper',
         startNumber: countNumber,
         totalNumber: '08',

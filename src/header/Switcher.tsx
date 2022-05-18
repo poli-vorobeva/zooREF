@@ -7,8 +7,6 @@ interface ISwitcherProps{
     eventHandler:()=>void
 }
 export const Switcher:React.FC<ISwitcherProps>=(props)=>{
-    console.log(props)
-
     return (
         <div className='switcher'>
             <input id="switcher" type="checkbox" onChange={props.eventHandler} className={props.color==='light'?"switch-input-light":"switch-input-dark"}/>

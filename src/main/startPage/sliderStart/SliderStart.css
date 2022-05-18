@@ -44,8 +44,14 @@
 
 .start-slider-figure-content .slider-figcaption__buttons {
     display: flex;
+    align-items: end;
+    height: 50%;
 }
-
+.start-slider-buttonWrapper{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
 .slider-item-active {
     /* transform: scale(1.4,1.7);*/
     width: 250px;
@@ -72,6 +78,7 @@
 .slider-figcaption span {
     letter-spacing: 2px;
     line-height: 10px;
+    display: inline-block;
 }
 
 .slider__line {
@@ -135,6 +142,15 @@
 
 .dot_hide {
     opacity: 0;
+}
+.slider__button-watch{
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 50%;
+    outline: none;
+    background-position: center;
 }
 
 @media ( max-width: 1200px) {}

@@ -4,7 +4,7 @@ import {HeaderNav, linksObj} from "./HeaderNav";
 import {HeaderBurger} from "./HeaderBurger";
 import {Switcher} from "./Switcher";
 import {useState} from "react";
-export const Header=(props:{drawPage:(page:string)=>void})=>{
+export const Header=(props:{drawPage:(page:string)=>void, switchTheme:()=>void})=>{
     const navLinks:linksObj={
         about:"./index.html",
         zoos:"pages/zoos/panda.html",
@@ -14,7 +14,7 @@ export const Header=(props:{drawPage:(page:string)=>void})=>{
     const [color,setColor]=useState('light')
     const changeColor=()=>{
         setColor(color === 'light' ? 'dark' : 'light')
-        console.log(color)
+        props.switchTheme()
     }
 
     return(

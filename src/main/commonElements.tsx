@@ -47,6 +47,8 @@ export interface ISliderStartButton {
     link: string,
     svgPath: string,
     clickHandler?:(data?:string)=>void
+    width?:number,
+    height?:number
 }
 export interface IRange {
     containerClass: string,
@@ -83,9 +85,11 @@ export const SliderRange = (props: IRange) => {
 export const Button = (props: ISliderStartButton) => {
     return (
         <div className="start-slider-buttonWrapper">
-            <button className={props.cls} onClick={()=>props.clickHandler()}>
+            <button className={props.cls} onClick={()=>props.clickHandler()} style={{
+               backgroundImage: props.svgPath
+            }}>
                 <a href={props.link}>
-                    <span className="start-page-slider-watch" style={{ backgroundImage: props.svgPath }}></span>
+                    {/*<span className="start-page-slider-watch" style={{ backgroundImage: props.svgPath }}></span>*/}
                 </a>
             </button>
             <span>

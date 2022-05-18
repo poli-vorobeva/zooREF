@@ -1,6 +1,6 @@
 import * as React from "react";
 import {Aside} from "./startPage/asideStart/Aside";
-import {SliderStart} from "./startPage/SliderStart";
+import {SliderStart} from "./startPage/sliderStart/SliderStart";
 import {StartPage} from "./startPage/StartPage";
 import {HowWork} from "./howWork/howWork";
 import {PetsInZoo} from "./petsInZoo/PetsInZoo";

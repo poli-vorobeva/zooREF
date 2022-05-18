@@ -22,7 +22,7 @@
   width: 30px;
   height: 10px;
   /* border-radius: 3px;*/
-  background: #ffffff;
+  background: var(--text-color);
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -2px;

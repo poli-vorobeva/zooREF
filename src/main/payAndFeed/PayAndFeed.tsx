@@ -21,7 +21,7 @@ export const PayAndFeed = () => {
     ]
     return (
         <article className="pay-and-feed">
-            <div className="pay-and-feed__wrapper">
+            <div className="pay-and-feed__wrapper ">
                 <h2 className="title pay-and-feed__title">Pay and feed</h2>
                 <p className="pay-and-feed__text">
                     The opportunity to easily and naturally (but as often as possible) donate to the needs of
