@@ -120,4 +120,7 @@
     .header__nav {
         display: none;
     }
+    .header__burger-menu__btn {
+        top: -2px;
+        right: 0;}
 }

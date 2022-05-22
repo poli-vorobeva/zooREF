@@ -45,7 +45,7 @@
     width: 50%;
     height: 50%;
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
     .pay-and-feed {
         height: 650px;
     }

@@ -19,10 +19,10 @@ export const PetsInZooSliderItem = (props: ISliderItem) => {
         <figure className={'petsInZoo-figcaption'}
                 data-index={props.index}
                 style={{width: props.width + "px", margin: props.margin + "px",
-                height:props.screenWidth<=320?props.width*4+'px':'unset'}}>
+                height:props.screenWidth<=640?props.width*4+'px':'unset'}}>
             <div className="petsInZoo-itemContent">
                 <img src={props.imgSrc} style={{width: props.width + "px",
-                    height:props.screenWidth<=320?props.width*4+'px':'unset'}}/>
+                    height:props.screenWidth<=640?props.width*4+'px':'unset'}}/>
                 <figcaption className="">
                 <span>
                     {props.text}

@@ -40,7 +40,7 @@
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
-    color:var(--text-color)
+    color: var(--text-color)
 }
 
 .how-work__content p {
@@ -62,11 +62,19 @@
     flex-flow: column nowrap;
     align-items: center;
 }
-@media (max-width: 320px) {
+
+@media (max-width: 1200px) {
+    .how-work__wrapper {
+        width: 71%;
+    }
+}
+
+@media (max-width: 640px) {
     .how-work__wrapper {
         width: 90%;
     }
-    .howWork__button{
+
+    .howWork__button {
         left: unset;
     }
 }

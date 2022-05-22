@@ -70,6 +70,7 @@
     background: transparent;
     border: none;
     outline: none;
+    mix-blend-mode: difference;
 }
 
 .pets-in-zoo-slider__right {
@@ -95,7 +96,7 @@
     background: transparent;
     mix-blend-mode: plus-lighter;
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
     .pets-in-zoo {
         height: 600px;
     }

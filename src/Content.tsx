@@ -27,7 +27,7 @@ export const Content = () => {
 	console.log(screenWidth)
 	window.onresize = (e) => {
 		setScreenWidth(document.body.offsetWidth)
-		console.log(screenWidth)
+		//console.log(screenWidth)
 	}
 	//todo to rerender scroll 0
 	//todo if not animal then panda

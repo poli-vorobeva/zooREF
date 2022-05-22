@@ -50,3 +50,9 @@
 {
   left: 24px;
 }
+
+@media(max-width: 640px){
+  .switcher {
+    left: -60px;
+  }
+}

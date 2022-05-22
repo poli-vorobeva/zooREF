@@ -3,7 +3,7 @@ import {SliderStart} from "./sliderStart/SliderStart";
 import * as React from "react";
 import './StartPage.css'
 
-export const StartPage=(props:{ drawPage:(page:string)=>void})=>{
+export const StartPage=(props:{ drawPage:(page:string)=>void, screenWidth:number})=>{
     return(
         <article className="start-page" style={{backgroundImage:"url(./public/assets/bg-main.png)"}}>
             <div className="start-page__wrapper">
@@ -22,7 +22,7 @@ export const StartPage=(props:{ drawPage:(page:string)=>void})=>{
                             <div className="button__vertical"></div>
                         </button>
                     </div>
-                    <SliderStart drawPage={props.drawPage}/>
+                    <SliderStart drawPage={props.drawPage} screenWidth={props.screenWidth}/>
                 </div>
             </div>
         </article>

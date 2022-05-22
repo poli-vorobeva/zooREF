@@ -12,7 +12,7 @@ import {Header} from "../header/Header";
 export const Main = (props:{ drawPage:(page:string)=>void, screenWidth:number}) => {
     return (
         <main className="landing__main" data-testid={'main'}>
-            <StartPage drawPage={props.drawPage}/>
+            <StartPage drawPage={props.drawPage} screenWidth={props.screenWidth}/>
             <HowWork drawPage={props.drawPage}/>
             <PetsInZoo drawPage={props.drawPage} screenWidth={props.screenWidth}/>
             <PayAndFeed/>

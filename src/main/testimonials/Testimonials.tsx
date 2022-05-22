@@ -5,7 +5,7 @@ import { useState } from "react";
 import TestimonialsSlider from "./TestimonialsSlider";
 export const Testimonials = (props:{screenWidth:number}) => {
 const itemsLength=2
-  const itemWidth = props.screenWidth<=320?200:700
+  const itemWidth = props.screenWidth<=640?props.screenWidth*0.75:700
   return (
     <article className="testimonials">
       <div className="testimonials-wrapper">

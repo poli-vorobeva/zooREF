@@ -8,7 +8,7 @@ import {SliderLine} from "./SliderLine";
 import {StartSliderWrapper} from "./StartSliderWrapper";
 
 
-export const SliderStart = (props: { drawPage: (page: string) => void }) => {
+export const SliderStart = (props: { drawPage: (page: string) => void , screenWidth:number}) => {
     const [activeSlide, setActiveSlide] = useState(0)
     const [translate, setTranslate] = useState(0)
 
@@ -40,7 +40,7 @@ export const SliderStart = (props: { drawPage: (page: string) => void }) => {
     return (
         <Fragment>
             <div className="start-page-slider">
-                <div className="slider-content_hide" style={{left: itemWidth / 2 + 'px'}}>
+                <div className="slider-content_hide" style={{left: props.screenWidth>320 && itemWidth / 2 + 'px'}}>
                     <SliderLine translate={translate * itemWidth / 2}/>
                    <StartSliderWrapper
                        translate={translate}

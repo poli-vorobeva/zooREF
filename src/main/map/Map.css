@@ -85,16 +85,34 @@
     height: 140px;
     position: relative;
 }
-
+.map__content{
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+@media(max-width: 640px){
+    .map__pin-wrapper {
+        top: -35px;
+    }
+    .pin__icon{
+        width: 55px;
+        height: 20px;
+    }
+    .pin__icon svg{
+        width: 100%;
+    }
+    .pin__icon img{
+        width: 50%;
+        padding-top: 12px;
+    }
+}
 @media (max-width: 320px) {
     .map{
         height: 300px;
     }
     .map__content{
-        height: 100%;
-        display: flex;
-        flex-flow: column;
-        justify-content: space-evenly;
+
     }
     .map__pin-wrapper{
        top:-40px

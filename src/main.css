@@ -160,7 +160,7 @@ width: 200px;
 .number-toggle-light b,.number-light b{
     font-size: 2rem;
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
     .title{
         font-size: 30px;
     }

@@ -22,7 +22,7 @@
     width: 100px;
     height: 100px;
 }
-@media(max-width:320px){
+@media(max-width:640px){
     .our-mission__content{
         flex-flow: column;
         align-items: center;

@@ -2,39 +2,12 @@ import * as React from "react";
 import './PetsInZoo.css'
 import {Button, ButtonPrimary, slideClick, sliderItemsArray, SliderRange} from "../commonElements";
 import {useEffect, useState} from "react";
-import {PetsInZooSliderItem} from "./PetsInZooItem";
 import {SliderButton} from "./SliderButton";
+import {PetsInZooSliderBlock} from "./PetsSliderBlock";
 
-const PetsInZooSliderBlock = (props: {
-	start: number, width: number, margin: number, changePage: (page: string) => void, screenWidth:number
-}) => {
-
-	return (
-		<div className="pets-in-zoo-slider__block">
-			{
-				sliderItemsArray.map((e, i) => {
-					if (i >= props.start && i <= props.start + 3) {
-						return (
-							<PetsInZooSliderItem
-								animal={e.animal}
-								index={i}
-								imgSrc={e.src}
-								text={e.text}
-								width={props.width}
-								margin={props.margin}
-								handleChangePage={props.changePage}
-								screenWidth={props.screenWidth}
-							/>
-						)
-					}
-				})
-			}
-		</div>
-	)
-}
 export const PetsInZoo = (props: { drawPage: (page: string) => void, screenWidth: number }) => {
-	const itemWidth = props.screenWidth <= 320 ? 60 : 270
-	const margin = props.screenWidth <= 320 ? 2 : 15
+	const itemWidth = Math.floor(props.screenWidth/5)
+	const margin = props.screenWidth*0.008
 	const [countNumber, setCountNumber] = useState('02')
 	const [slides, setSlides] = useState([0])
 	const [direction, setDirection] = useState('')
@@ -62,6 +35,8 @@ export const PetsInZoo = (props: { drawPage: (page: string) => void, screenWidth
 			setCountNumber(`0${val}`)
 		}
 	}
+	const petsInZooHeight=(props.screenWidth<=640 && props.screenWidth>500) ? '800px'
+		:(props.screenWidth<=500 && props.screenWidth>400) ? '650px':''
 	const deleteElement = () => {
 		if (direction) {
 			setTransition('none')
@@ -91,17 +66,17 @@ export const PetsInZoo = (props: { drawPage: (page: string) => void, screenWidth
 		}
 	}
 	return (
-		<article className="pets-in-zoo">
+		<article className="pets-in-zoo" style={{height:petsInZooHeight}}>
 			<div className="pets-in-zoo__wrapper">
 				<h2 className="pets-in-zoo__title title">Pets in Zoo</h2>
 				<div className="pets-in-zoo__slider-wrapper" style={{
 					width: (itemWidth + margin) * 8 + "px",
-				height:(props.screenWidth<=320?itemWidth*4 +'px':'unset')}}>
+				height:(props.screenWidth<=640?itemWidth*4 +'px':'unset')}}>
 					<div className="pets-in-zoo__slider-hide__wrapper" style={{width: (itemWidth + margin) * 4 + "px",
-						height:(props.screenWidth<=320?itemWidth*4 +'px':'unset')}}>
+						height:(props.screenWidth<=640?itemWidth*4 +'px':'unset')}}>
 						<div className="pets-in-zoo__slider-hide" style={{
 							width: (itemWidth + margin * 2) * 4 + "px",
-							height:(props.screenWidth<=320?itemWidth*4 +'px':'unset'),
+							height:(props.screenWidth<=640?itemWidth*4 +'px':'unset'),
 							transition: transition,
 							transform: transform
 						}}
