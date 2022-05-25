@@ -4,10 +4,10 @@ import {videoFrame} from "../animalPageVideo";
 import {Button} from "../../../../components/button";
 import {Image} from "../../../../components/image";
 
-export const AnimalPageVideoSlider = (props: { videoData: videoDataType }) => {
-    const itemWidth = 180
-    const itemHeight = 100
-    const itemMargin = 10
+export const AnimalPageVideoSlider = (props: { videoData: videoDataType, screenWidth:number }) => {
+    const itemWidth = props.screenWidth<1000?props.screenWidth/6:180
+    const itemHeight = itemWidth*0.55
+    const itemMargin = props.screenWidth<700?1:10
     const [displayArrows, setDisplayArrows] = useState(false)
     const [currentPosition, setCurrentPosition] = useState(0)
     const differentWidht = ((itemWidth + itemMargin) * props.videoData.videos.length) - (itemWidth + itemMargin) * 3

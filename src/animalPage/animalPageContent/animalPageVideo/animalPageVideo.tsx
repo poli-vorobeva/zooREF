@@ -18,12 +18,12 @@ export const videoFrame=(props:{width:number,height:number,url:string,iframeLoad
     )
 }
 
-export const AnimalPageVideo=(props:{activeAnimal:string})=>{
+export const AnimalPageVideo=(props:{activeAnimal:string,screenWidth:number})=>{
 const videoData = videoAnimalsData.find(el=>el.animal===props.activeAnimal)
     const [playVideo,setPlayVideo]=useState(false)
     const [loadVideo,setLoadVideo]=useState(false)
-    const width= 560
-    const height= 315
+    const width=props.screenWidth<1000? props.screenWidth/2:560
+    const height= width*0.55
     const iframeLoadHandler=()=>{
     setLoadVideo(true)
     }
@@ -40,7 +40,7 @@ const videoData = videoAnimalsData.find(el=>el.animal===props.activeAnimal)
                 }
             </div>
 
-            <AnimalPageVideoSlider videoData={videoData}/>
+            <AnimalPageVideoSlider videoData={videoData} screenWidth={props.screenWidth}/>
         </div>
 
     )

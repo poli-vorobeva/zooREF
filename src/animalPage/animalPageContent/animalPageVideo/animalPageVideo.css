@@ -1,13 +1,22 @@
 @media (max-width: 1100px) {
-    .animalPage_videoActive{
-        transform: scale(0.7);
+    .animalPage_videoActive {
+        /*     transform: scale(0.7);*/
+        min-width: 200px;
+        min-height: 120px;
     }
-    .animalPageVideo_sliderWrapper{
-        transform: scale(0.7);
+.animalPageVideo_sliderWrapper{
+    min-width: 200px;
+}
+    .animalPageVideo_sliderItem {
+        min-width: 65px;
+        min-height: 30px;
+
     }
 }
+
 .animalPage-video {
     width: 80%;
+    padding: 20px 0;
 }
 
 .animalPage_videoActive {
@@ -29,7 +38,8 @@
     border-radius: 13px;
     transition: all ease 500ms;
 }
-.animalPage_videoSliderItemButton{
+
+.animalPage_videoSliderItemButton {
     position: absolute;
     top: 27%;
     left: 33%;
@@ -41,12 +51,14 @@
     border-radius: 13px;
     transition: all ease 500ms;
 }
+
 .animalPageVideo_sliderItem:hover
-.animalPage_videoSliderItemButton{
+.animalPage_videoSliderItemButton {
     background-color: #ff132cd9;
     box-shadow: inset 0 0 33px 10px #e1021c;
 
 }
+
 .animalPage_videoActive:hover .animalPage_videoActiveButton {
     background-color: #ff132cd9;
     box-shadow: inset 0 0 33px 10px #e1021c;
@@ -74,7 +86,8 @@
     background-position: center;
     position: relative;
 }
-.animalPageVideo_sliderLeft,.animalPageVideo_sliderRight{
+
+.animalPageVideo_sliderLeft, .animalPageVideo_sliderRight {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -83,19 +96,26 @@
     align-items: center;
 }
 
-.animalPageVideo_sliderLeft,.animalPageVideo_sliderRight{
+.animalPageVideo_sliderLeft, .animalPageVideo_sliderRight {
     mix-blend-mode: plus-lighter;
 }
-.animalPageVideo_sliderLeft {left: 0}
 
-.animalPageVideo_sliderRight {right: 0;}
-.animalPageVideo_sliderRight img{
+.animalPageVideo_sliderLeft {
+    left: 0
+}
+
+.animalPageVideo_sliderRight {
+    right: 0;
+}
+
+.animalPageVideo_sliderRight img {
     transform: rotate(180deg);
     position: relative;
     right: 15px;
 
 }
-.animalPage_videoActive>button{
+
+.animalPage_videoActive > button {
     position: absolute;
     top: 42%;
     left: 46%;

@@ -12,7 +12,7 @@ export type animalDataType={
     habitat:string,
     diet:string}
 
-export const AnimalPage = (props?: { animal:string ,drawPage:(page:string)=>void}) => {
+export const AnimalPage = (props?: { animal:string ,drawPage:(page:string)=>void,screenWidth:number}) => {
     const currentAnimal=props.animal||'panda'
     return (
         <main className="animalPage_wrapper">
@@ -23,7 +23,9 @@ export const AnimalPage = (props?: { animal:string ,drawPage:(page:string)=>void
                      imgSrc:el.imgSrc
                  }
              })} currentActiveAnimal={currentAnimal} drawPage={props.drawPage}/>
-            <AnimalPageContent animal={animalsData.find(el=>el.animal===currentAnimal)} currentActiveAnimal={currentAnimal}/>
+            <AnimalPageContent animal={animalsData.find(el=>el.animal===currentAnimal)}
+                               currentActiveAnimal={currentAnimal}
+                               screenWidth={props.screenWidth}/>
         </main>
     )
 }

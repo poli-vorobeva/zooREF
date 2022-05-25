@@ -1,9 +1,15 @@
+.footer{
+    width: 100%;
+    background: black;
+}
 .footer__content {
     display: flex;
     justify-content: space-between;
-    background: black;
     color: white;
+    background: black;
     height: 700px;
+    margin: 0 auto;
+    max-width: 1400px;
 }
 
 .footer__form,

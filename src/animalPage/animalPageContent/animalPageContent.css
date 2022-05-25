@@ -6,3 +6,8 @@
     align-items: center;
     max-width: 1000px;
 }
+@media (max-width: 640px) {
+    .animalPage_content{
+        flex-flow: column;
+    }
+}

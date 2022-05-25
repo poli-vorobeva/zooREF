@@ -36,10 +36,10 @@ export const Content = () => {
 			<Header drawPage={drawPage} switchTheme={switchTheme}/>
 			{
 				currentPage === 'main' ? <Main drawPage={drawPage} screenWidth={screenWidth}/>
-					: currentPage === 'zoos' || currentPage === 'panda' ? <AnimalPage animal={''} drawPage={drawPage}/>
-					: currentPage === 'eagle' ? <AnimalPage animal={'eagle'} drawPage={drawPage}/>
-						: currentPage === 'gorilla' ? <AnimalPage animal={'gorilla'} drawPage={drawPage}/>
-							: currentPage === 'alligator' ? <AnimalPage animal={'alligator'} drawPage={drawPage}/> : ''
+					: currentPage === 'zoos' || currentPage === 'panda' ? <AnimalPage animal={''} drawPage={drawPage} screenWidth={screenWidth}/>
+					: currentPage === 'eagle' ? <AnimalPage animal={'eagle'} drawPage={drawPage} screenWidth={screenWidth}/>
+						: currentPage === 'gorilla' ? <AnimalPage animal={'gorilla'} drawPage={drawPage} screenWidth={screenWidth}/>
+							: currentPage === 'alligator' ? <AnimalPage animal={'alligator'} drawPage={drawPage} screenWidth={screenWidth}/> : ''
 			}
 			<Footer/>
 		</>

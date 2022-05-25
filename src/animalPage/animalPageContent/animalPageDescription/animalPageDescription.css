@@ -1,3 +1,9 @@
 .animalPage_description{
     width: 25%;
 }
+@media (max-width: 640px) {
+    .animalPage_description {
+        width: 100%;
+        text-align: justify;
+    }
+}
