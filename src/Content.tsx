@@ -45,3 +45,5 @@ export const Content = () => {
 		</>
 	)
 }
+//todo links from burgerMenu
+//todo mapMage
